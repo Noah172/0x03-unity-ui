@@ -2782,6 +2782,8 @@ MonoBehaviour:
   health: 5
   scoreText: {fileID: 680534851}
   healthText: {fileID: 1331956907}
+  winlose: {fileID: 0}
+  screen: {fileID: 0}
 --- !u!1 &715668667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,6 +3839,7 @@ GameObject:
   - component: {fileID: 971092552}
   - component: {fileID: 971092554}
   - component: {fileID: 971092553}
+  - component: {fileID: 971092555}
   m_Layer: 5
   m_Name: WinLoseText
   m_TagString: Untagged
@@ -3904,6 +3907,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971092551}
   m_CullTransparentMesh: 0
+--- !u!114 &971092555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971092551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0365d17213d587f47b3e5e6215e0b0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1500
+  health: 5
+  scoreText: {fileID: 680534851}
+  healthText: {fileID: 1331956907}
+  winlose: {fileID: 971092553}
+  screen: {fileID: 1024910365}
 --- !u!1 &1024910363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,6 +3936,7 @@ GameObject:
   - component: {fileID: 1024910364}
   - component: {fileID: 1024910366}
   - component: {fileID: 1024910365}
+  - component: {fileID: 1024910367}
   m_Layer: 5
   m_Name: WinLoseBG
   m_TagString: Untagged
@@ -3979,6 +4001,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024910363}
   m_CullTransparentMesh: 0
+--- !u!114 &1024910367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024910363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0365d17213d587f47b3e5e6215e0b0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1500
+  health: 5
+  scoreText: {fileID: 0}
+  healthText: {fileID: 0}
+  winlose: {fileID: 0}
+  screen: {fileID: 0}
 --- !u!1001 &1040347775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5237,6 +5277,8 @@ MonoBehaviour:
   health: 5
   scoreText: {fileID: 680534851}
   healthText: {fileID: 1331956907}
+  winlose: {fileID: 0}
+  screen: {fileID: 0}
 --- !u!1001 &1394247489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7563,6 +7605,8 @@ MonoBehaviour:
   health: 5
   scoreText: {fileID: 680534851}
   healthText: {fileID: 1331956907}
+  winlose: {fileID: 971092553}
+  screen: {fileID: 1024910365}
 --- !u!1001 &1945959497
 PrefabInstance:
   m_ObjectHideFlags: 0

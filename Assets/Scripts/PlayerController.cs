@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     
     public Text scoreText;
     public Text healthText;
+    public Text winlose;
+    public Image screen;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,10 @@ public class PlayerController : MonoBehaviour
 
         if (health == 0)
         {
+            screen.gameObject.SetActive(true);
+            winlose.color = Color.white;
+            screen.color = Color.red;
+            winlose.text = "Game Over!";
             SceneManager.LoadScene("maze");
             health = 5;
             score = 0;
@@ -70,7 +76,12 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("Goal"))
         {
-            Debug.Log("You win!");
+            //Debug.Log("You win!");
+            screen.gameObject.SetActive(true);
+            winlose.color = Color.black;
+            winlose.text = "You Win!";
+            screen.color = Color.green;
+            SceneManager.LoadScene("maze");
         }
     }
     void SetScoreText()
