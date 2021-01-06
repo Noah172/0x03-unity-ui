@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 
 public class PlayerController : MonoBehaviour
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
             winlose.color = Color.white;
             screen.color = Color.red;
             winlose.text = "Game Over!";
-            SceneManager.LoadScene("maze");
+            StartCoroutine(LoadScene(3f));
             health = 5;
             score = 0;
         }
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
             winlose.color = Color.black;
             winlose.text = "You Win!";
             screen.color = Color.green;
-            SceneManager.LoadScene("maze");
+            StartCoroutine(LoadScene(3f));
         }
     }
     void SetScoreText()
@@ -92,5 +93,9 @@ public class PlayerController : MonoBehaviour
     {
         healthText.text = "Health: " + health;
     }
-    
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
