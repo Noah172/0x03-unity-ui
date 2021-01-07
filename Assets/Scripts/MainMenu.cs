@@ -7,17 +7,17 @@ public class MainMenu : MonoBehaviour
 {
     public Button playButton;
     public Button quitButton;
-    public Button optionsButton;
-    public Button backButton;
-    public GameObject mainMenu;
-    public GameObject optionMenu;
+    // // public Button optionsButton;
+    // // public Button backButton;
+    // // public GameObject mainMenu;
+    // // public GameObject optionMenu;
     // Start is called before the first frame update
     void Start()
     {
         playButton.onClick.AddListener(PlayMaze);
         quitButton.onClick.AddListener(QuitMaze);
-        optionsButton.onClick.AddListener(OptionsMenu);
-        backButton.onClick.AddListener(BackToMain);
+        // optionsButton.onClick.AddListener(OptionsMenu);
+        // backButton.onClick.AddListener(BackToMain);
     }
 
     // Update is called once per frame
@@ -34,14 +34,14 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit Game");
     }
-    public void OptionsMenu()
-    {
-        mainMenu.SetActive(false);
-        optionMenu.SetActive(true);
-    }
-    public void BackToMain()
-    {
-        mainMenu.SetActive(true);
-        optionMenu.SetActive(false);
-    }
+    // public void OptionsMenu()
+    // {
+    //     mainMenu.SetActive(false);
+    //     optionMenu.SetActive(true);
+    // }
+    // public void BackToMain()
+    // {
+    //     mainMenu.SetActive(true);
+    //     optionMenu.SetActive(false);
+    // }
 }
