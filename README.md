@@ -1,6 +1,6 @@
 # 0x03. Unity - UI
 
-## Tasks
+## Tasks 
 
 #### Task 0. Scoreboard
 Clone your 0x02-unity-scripting repo into a new repo called 0x03-unity-ui. Like the previous project, this project should be inside its own repo, not within a subdirectory.
