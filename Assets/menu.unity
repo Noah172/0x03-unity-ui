@@ -469,6 +469,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 1127108373}
   quitButton: {fileID: 922157790}
+  trapMat: {fileID: 2100000, guid: 0c272642628afa4478dc01756e0b14a6, type: 2}
+  goalMat: {fileID: 2100000, guid: 8184b29c25dc34940938602e2bb5fcc5, type: 2}
+  colorblindMode: {fileID: 1411958578}
 --- !u!1 &602321466
 GameObject:
   m_ObjectHideFlags: 0
