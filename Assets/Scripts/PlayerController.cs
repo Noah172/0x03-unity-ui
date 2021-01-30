@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb_player;
     public float speed = 1500f;
-    private int score = 0;
+    [SerializeField] private item score;
     public int health = 5;
+    [SerializeField] private Inventary inventary;
     
     public Text scoreText;
     public Text healthText;
@@ -61,16 +62,17 @@ public class PlayerController : MonoBehaviour
             winlose.text = "Game Over!";
             StartCoroutine(LoadScene(3f));
             health = 5;
-            score = 0;
+            score.amount = 0;
         }
     }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Pickup"))
         {
-            score++;
+            score.amount++;
             // Debug.Log($"Score: {score}");
             SetScoreText();
+            inventary.UpdateUI();
             Destroy(other.gameObject);
         }
         if (other.CompareTag("Trap"))
@@ -91,7 +93,8 @@ public class PlayerController : MonoBehaviour
     }
     void SetScoreText()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score.amount;
+
     }
     void SetHealthText()
     {
